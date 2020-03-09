@@ -1,0 +1,252 @@
+
+/*  визуальное  прятанье  */
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden{
+position: absolute;
+width: 1px;
+height: 1px;
+margin: -1px;
+border: 0;
+padding: 0;
+white-space: nowrap;
+clip-path: inset(100%);
+clip: rect(0 0 0 0);
+overflow: hidden;
+}
+
+.clearfix::after{         /* очищяем  чтобы флоаты чуствовали  друг  друга */
+  display: table;                  /* указываем  елемент  таблицей  для  оптикания текста  */
+  content: "";                      /*  создайом  пустой контент  */
+  clear: both;                     /*  отменяет  оптикание  елемента  с  права и слева  */
+}
+
+body{
+  width: 1112px;              /* ширина  контейнера */
+  margin: 0 auto;           /* по  вертикали  ноль  по  ширине  авто  */
+}
+
+.page-header{
+  padding-top: 35px;
+  padding-bottom: 70px;
+}
+
+.site-navigation{
+  float: right;
+  list-style: none;     /*  убераем  оформление  списка  ( точки )  */
+}
+  
+.site-navigation li{
+  float: left;
+}
+  
+.site-navigation li:not(:last-child){
+  margin-right: 32px;
+}
+
+.site-navigation a{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;            /* жирность  */
+  display: block;
+  color: #0f0101;           /*  цвет  текста  */
+  text-transform: uppercase ;   /*  зделать  текст  с  большой  буквой  */
+  text-decoration: none ;        /*  убераем  подчеркивание  */
+  font-size: 14px;            /*  размер  шрифта  */
+  margin-top: 9px;
+}
+.site-navigation a:hover,      /*  задайом  цвет  при  наведении  на  сылку  */
+.site-navigation a:focus{      /*  задайом  цвет  при    перемещении  клавиатурой  таб  */
+  color: #1abc9c;
+}
+
+
+
+
+h1{
+  display: inline-block;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;            /* жирность  */
+  line-height: 32px;          /*  размер  строковой  линии  */
+  font-size: 30px;            /*  размер  шрифта  */
+  text-transform: uppercase ;   /*  зделать  текст  с  большой  буквой  */
+  color: #656262;            /*  цвет  текста  */
+  text-align: left;      /* размещяем  по  центру  текст */
+}
+h1:first-letter{                                 /*  делаем  рисочку под h2   before */
+  font-weight: 900;            /* жирность  */
+  color: #1abc9c;               /* задайом цвет заливки контента */
+}
+
+h2{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;              /* жирность  шрифта  */
+  line-height: 112px;          /*  размер  строковой  линии  */
+  font-size: 48px;            /*  размер  шрифта  */
+  text-transform: uppercase ;   /*  зделать  текст  с  большой  буквой  */
+  color: #555252;            /*  цвет  текста  */
+  text-align: center;      /* размещяем  по  центру  текст */
+  padding: 0;
+  margin: 0;
+  margin-bottom: 80px;
+}
+h2::after{                                 /*  делаем  рисочку под h2   before */
+  content: '';                             /*  создайом  пустой контент  */
+  display: block;                            /* делаем  елемент  блочным */
+  padding: 0;
+  margin: 0;
+  width: 165px;                            /*  задайом  ширину */
+  height: 8px;                              /*  задайом  высоту  */
+  background-color: #4ec6ab;               /* задайом цвет заливки контента */
+  margin: 0  auto;                           /*  устанавливаем  блок  по  центру  ширины  */
+}
+
+.featured-products-list{            /*  здвигае  весь  блок  списка  вниз  */
+  list-style: none;                        /*  убераем  оформление  списка  ( точки )  */
+  padding-bottom: 92px;                      /* указываем  нижний  размер  марджина  */
+}
+
+.img-nazva{
+  float: left;
+}
+.img-dolor{
+ float: right;
+}
+.img-nazva{
+ display: block;                              /* делаем  елемент  блочным */
+ font-family: 'Roboto', sans-serif;
+ font-weight: 900;              /* жирность  шрифта  */
+ font-size: 18px;            /*  размер  шрифта  */
+ line-height: 40px;                        /*  размер  строковой  линии  */
+ text-transform: uppercase ;   /*  зделать  текст  с  большой  буквой  */
+ color: #ffffff;            /*  цвет  текста  */
+ text-align: left;      /* размещяем  по  центру  текст */
+ width: 186px;                 /* ширина  контейнера  */
+ height: 40px;                 /* высота  контейнера  */  
+ margin: 0;
+ padding: 0;
+ padding-left: 14px; 
+ background-color: #323232;    /*  задайом  цвет  фона  */
+}
+.img-dolor{
+ display: block;                              /* делаем  елемент  блочным */
+ font-family: 'Roboto', sans-serif;
+ font-weight: 900;              /* жирность  шрифта  */
+ line-height: 40px;                        /*  размер  строковой  линии  */
+ font-size: 18px;            /*  размер  шрифта  */
+ text-transform: uppercase ;   /*  зделать  текст  с  большой  буквой  */
+ color: #ffffff;            /*  цвет  текста  */
+ text-align: center;      /* размещяем  по  центру  текст */
+ width: 55px;                 /* ширина  контейнера  */
+ height: 40px;                 /* высота  контейнера  */  
+ margin: 0;
+ padding: 0;
+ background-color: #8c8c8c;    /*  задайом  цвет  фона  */
+}
+
+
+
+
+.products-list-item{
+  float: left;                             /* к ли  пременяем  флоат */
+  width: 255px;                            /*  задайом  ширину */
+  height: 324px;                              /*  задайом  высоту  */
+  margin-right: 30px;                       /* задайом  правый  отступ  */
+  margin-bottom: 30px;                       /* задайом  нижний  отступ */
+  background-color: #e9f0fd;    /*  задайом  цвет  фона  */
+} 
+
+.products-list-item:hover .img-nazva ,      /*  задайом  цвет  при  наведении  на  сылку  */
+.products-list-item:focus .img-nazva{      /*  задайом  цвет  при    перемещении  клавиатурой  таб  */
+ background-color: #1abc9c;
+}
+.products-list-item:hover .img-dolor ,      /*  задайом  цвет  при  наведении  на  сылку  */
+.products-list-item:focus .img-dolor{      /*  задайом  цвет  при    перемещении  клавиатурой  таб  */
+ background-color: #7fd9c7;
+}
+
+
+
+.products-list-item:nth-child(4n){           /* 4  в  колекции  */
+  margin-right: 0;                              /*  обнуляем  левый  марджин  */
+}
+   
+.products-list-item:nth-last-child(-n+4){       /* 4  в  колекции  */
+  margin-bottom: 0;                             /*  обнуляем  нижний  марджин  */
+}
+
+.latest-news-item{
+  float: left;                             /* к ли  пременяем  флоат */
+  width: 350px;                            /*  задайом  ширину */
+  margin-right: 30px;                       /* задайом  правый  отступ  */ 
+}
+
+.latest-news-item:nth-child(3n){    /* 3  в  колекции  */
+  margin-right: 0;                         /*  обнуляем  левый  марджин  */
+}
+
+.latest-news-list{
+  list-style: none;                           /*  убераем  оформление  списка  ( точки )  */
+  margin-bottom: 80px;                      /* указываем  нижний  размер  марджина  */
+}
+
+.latest-news-lor{
+  font-family: 'Open Sans', sans-serif;      /* подключаем  необходимый  шрифт  */
+  font-weight: 600;                          /* жирность  шрифта  */
+  line-height: 26px;                       /*  размер  строковой  линии  */
+  font-size: 18px;                         /*  размер  шрифта  */
+  color: #555252;                        /*  цвет  текста  */
+  text-align: left;                         /* размещяем  по  центру  текст */
+  margin-bottom: 25px;                         /* указываем  нижний  размер  марджина  */
+}
+
+.latest-news-lor::after{      /*  делаем  рисочку под h2   before */
+  content: '';                                 /*  создайом  пустой контент  */
+  display: block;                              /* делаем  елемент  блочным */
+  width: 136px;                                /*  задайом  ширину */
+  height: 3px;                                 /*  задайом  высоту  */
+  margin: 0  left;                             /*  устанавливаем  блок  по  центру  ширины  */
+  background-color: #4ec6ab;                 /* задайом цвет заливки контента */
+  margin-top: 10px;                            /*  верхний отступ блока  */
+}
+
+.latest-news-tex{
+  font-family: 'Open Sans', sans-serif;     /* подключаем  необходимый  шрифт  */
+  font-weight: 400;                         /* указываем  жирность  шрифта  */
+  line-height: 26px;                        /*  размер  строковой  линии  */
+  font-size: 14px;                        /*  размер  шрифта  */
+  color: #555252;                       /*  цвет  текста  */
+  text-align: left;                        /* размещяем елемент  с лева  по  ширене  */
+  margin-bottom: 12px;                     /* указываем  нижний  размер  марджина  */
+}
+     /* КНОПКИ  */
+.sread{
+  width: 160px;                 /* ширина  контейнера  */
+  height: 52px;                 /* высота  контейнера  */   
+  cursor: pointer;             /*  ефект  наведения  */
+  background-color: #4ec6ab;   /*  задайом  фон  внутри   */
+  border-radius: 3px;            /* задайом закругление углов бордера */
+ }
+.read-more{
+  display: block;                         /* задайом строчному елементу поведение блока */
+  font-family: 'Open Sans', sans-serif;   /* подключаем  необходимый  шрифт  */
+  font-weight: 300;                        /* указываем  жирность  шрифта  */
+  font-size: 16px;                         /* указываем  размер  шрифта  */
+  color: #ffffff;                        /* задайом  цвет  текста  */
+  width: 160px;                 /* ширина  контейнера  */
+  height: 34px;                 /* высота  контейнера  */   
+  cursor: pointer;             /*  ефект  наведения  */
+  background-color: #4ec6ab;   /*  задайом  фон  внутри   */
+  border-radius: 3px;            /* задайом закругление углов бордера */
+  text-align: center;                      /* размещяем елемент  по  центру  по  ширене  */
+  text-decoration: none ;                  /*  убераем  подчеркивание  */
+  padding-top: 18px;
+ }
+.read-more:hover,                     /*  задайом  цвет  при  наведении  курсора  */
+.read-more:focus{                     /*  задайом  цвет  при    перемещении  клавиатурой  таб  */
+  background-color: #000000;    /*  задайом  цвет  фона  */
+  color: #4ec6ab;               /*  задайом  цвет  тексту  */
+ }
+
+
+
+ 
